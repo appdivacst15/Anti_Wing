@@ -18,7 +18,7 @@ class ScrapingView(TemplateView):
     template_name = "scraping.html"
 
     def get(self, request):
-        updated_date = RaceInfo.objects.values('race_date').last()
+        updated_date = RaceInfo.objects.order_by('race_date').values('race_date').last()
 
         if updated_date is None:
             params = {"updated_date": 'not update'}
@@ -34,7 +34,7 @@ class ScrapingView(TemplateView):
 
 # 現在時刻からDBをupdateする
 def main():
-    updated_date = RaceInfo.objects.values('race_date').last()
+    updated_date = RaceInfo.objects.order_by('race_date').values('race_date').last()
     if updated_date is None:
         start_date = datetime.date(2018, 1, 1)
     else:
