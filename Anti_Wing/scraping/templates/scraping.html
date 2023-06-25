@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scraping</title>
+</head>
+<body>
+    <h1>Scraping</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="update race_info">
+    </form>
+    <h2>{{ updated_date }}</h2>
+</body>
+</html>

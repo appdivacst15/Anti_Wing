@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimation</title>
+</head>
+<body>
+    <h1>Estimation</h1>
+    <p>試しに、説明変数をコースの種類、馬体重、コースのコンディション、として目的変数をタイムとしてやってみる。</p>
+
+    <form method="post">
+        {%  csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>

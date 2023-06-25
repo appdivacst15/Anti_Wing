@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Select menu</h1>
+
+    <form method="get">
+        {% csrf_token %}
+        <a href="scraping">scraping</a>
+    </form>
+
+    <form method="get">
+        {% csrf_token %}
+        <a href="estimation">estimation</a>
+    </form>
+</body>
+</html>
